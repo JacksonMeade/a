@@ -50,13 +50,6 @@ if (curHr < 12) {
 document.getElementById("text").innerHTML=text;
 });
 
-if (document.addEventListener)
-{
- document.addEventListener('fullscreenchange', exitHandler, false);
- document.addEventListener('mozfullscreenchange', exitHandler, false);
- document.addEventListener('MSFullscreenChange', exitHandler, false);
- document.addEventListener('webkitfullscreenchange', exitHandler, false);
-}
 
 var k=0;
 function exitHandler()
@@ -67,6 +60,7 @@ function exitHandler()
 if(k>1){window.close();}
  }
 }
+window.addEventListener("resize", exitHandler);
 
 function toggleFullScreen() {
   if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
