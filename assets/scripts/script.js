@@ -1,3 +1,13 @@
+$(document).keydown(function(e){
+    if(e.which === 123){
+ 
+       return false;
+ 
+    }
+ 
+});
+
+function load() {
 var today = new Date();
 var curHr = today.getHours();
 var text = "";
@@ -9,5 +19,5 @@ if (curHr < 12) {
 } else {
   text="Good Evening";
 }
-
 document.getElementById("text").innerHtml=text;
+}

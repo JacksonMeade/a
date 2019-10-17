@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp>
+<html amp oncontextmenu="return false" onkeydown="return false;" onmousedown="return false">
 <head>
   <!-- Site made with Mobirise Website Builder v4.8.1, https://mobirise.com -->
   <meta charset="UTF-8">
@@ -8,11 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
-  <title>Home</title>
+  <title>&#65279;</title>
   
 <link rel="canonical" href="index.html">
  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<script src="assets/scripts/script.js"></script>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <link href="https://fonts.googleapis.com/css?family=Limelight:400" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic" rel="stylesheet">
@@ -24,8 +23,34 @@ body{font-family: Roboto;}blockquote{border-color: #4ea2e3;}.display-1{font-fami
  
   <script async  src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script>
+$(document).keydown(function(e){
+    if(e.which === 123){
+ 
+       return false;
+ 
+    }
+ 
+});
+</script>
   
-  
+    <script type=text/javascript>
+window.onload = (function(){
+var today = new Date();
+var curHr = today.getHours();
+var text = "";
+
+if (curHr < 12) {
+  text="Good Morning";
+} else if (curHr < 18) {
+  text="Good Afternoon";
+} else {
+  text="Good Evening";
+}
+document.getElementById("text").innerHTML=text;
+});
+
+</script>
 </head>
 <body>
   <section class="header1 cid-rFb7qwVcJm mbr-fullscreen" id="header1-0">
@@ -33,8 +58,7 @@ body{font-family: Roboto;}blockquote{border-color: #4ea2e3;}.display-1{font-fami
     
 
     <div class="container">
-        <h1 class="mbr-section-title mbr-fonts-style align-right mbr-bold mbr-white display-1" id="text>
-            Good Evening</h1>
+        <h1 class="mbr-section-title mbr-fonts-style align-right mbr-bold mbr-white display-1" id="text"></h1>
         
         
         
@@ -42,7 +66,5 @@ body{font-family: Roboto;}blockquote{border-color: #4ea2e3;}.display-1{font-fami
 
 </section>
 
-
-  
 </body>
 </html>
