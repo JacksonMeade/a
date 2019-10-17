@@ -89,6 +89,10 @@ function toggleFullScreen() {
     }  
   }  
 }
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    window.close();
+}
 </script>
 </head>
 <body>
@@ -106,7 +110,7 @@ function toggleFullScreen() {
 </section>
 
 
-<input id="button" style="background:black;boder:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:0;" class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-1" type="button" value="Enter?" onclick="toggleFullScreen()" />
+<input id="button" style="background:black;border:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:0;" class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-1" type="button" value="Enter?" onclick="toggleFullScreen()" />
 
 </body>
 </html>
