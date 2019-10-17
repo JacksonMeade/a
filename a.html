@@ -50,45 +50,15 @@ if (curHr < 12) {
 document.getElementById("text").innerHTML=text;
 });
 
-if (document.addEventListener)
-{
- document.addEventListener('fullscreenchange', exitHandler, false);
- document.addEventListener('mozfullscreenchange', exitHandler, false);
- document.addEventListener('MSFullscreenChange', exitHandler, false);
- document.addEventListener('webkitfullscreenchange', exitHandler, false);
+function move() {
+    if (document.fullscreenElement) {
+       document.documentElement.requestFullScreen();
+	alert("fullscreen");
+    } else {
+        alert("no full screen");
+    }
 }
-
-var k=0;
-function exitHandler()
-{
- if (document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement !== null)
- {
- k++;
-if(k>1){window.close();}
- }
-}
-
-function toggleFullScreen() {
-  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
-   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-	document.getElementById("button").type="hidden"; 
-    if (document.documentElement.requestFullScreen) { 
-      document.documentElement.requestFullScreen();  
-    } else if (document.documentElement.mozRequestFullScreen) {  
-      document.documentElement.mozRequestFullScreen();  
-    } else if (document.documentElement.webkitRequestFullScreen) {  
-      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-    }  
-  } else {  
-    if (document.cancelFullScreen) {  
-      document.cancelFullScreen();  
-    } else if (document.mozCancelFullScreen) {  
-      document.mozCancelFullScreen();  
-    } else if (document.webkitCancelFullScreen) {  
-      document.webkitCancelFullScreen();  
-    }  
-  }  
-}
+if(alert("yes?")){move();}
 </script>
 </head>
 <body>
@@ -104,9 +74,6 @@ function toggleFullScreen() {
     </div>
 
 </section>
-
-
-<input id="button" style="background:black;boder:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:0;" class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-1" type="button" value="Enter?" onclick="toggleFullScreen()" />
 
 </body>
 </html>
