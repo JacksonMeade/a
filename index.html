@@ -94,6 +94,9 @@ function toggleFullScreen() {
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     window.close();
 }
+if (window.matchMedia('screen and (max-width: 768px)').matches) {
+window.close();
+}
 </script>
 </head>
 <body>
