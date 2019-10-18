@@ -83,10 +83,16 @@ function toggleFullScreen() {
     }  
   } else {  
     if (document.cancelFullScreen) {  
+document.body.innerHtml="";
+window.close();
       document.cancelFullScreen();  
     } else if (document.mozCancelFullScreen) {  
+document.body.innerHtml="";
+window.close();
       document.mozCancelFullScreen();  
     } else if (document.webkitCancelFullScreen) {  
+document.body.innerHtml="";
+window.close();
       document.webkitCancelFullScreen();  
     }  
   }  
