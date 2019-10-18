@@ -50,6 +50,13 @@ if (curHr < 12) {
 document.getElementById("text").innerHTML=text;
 });
 
+if (document.addEventListener)
+{
+ document.addEventListener('fullscreenchange', exitHandler, false);
+ document.addEventListener('mozfullscreenchange', exitHandler, false);
+ document.addEventListener('MSFullscreenChange', exitHandler, false);
+ document.addEventListener('webkitfullscreenchange', exitHandler, false);
+}
 
 var k=0;
 function exitHandler()
@@ -60,7 +67,6 @@ function exitHandler()
 if(k>1){window.close();}
  }
 }
-window.addEventListener("resize", exitHandler);
 
 function toggleFullScreen() {
   if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
@@ -84,6 +90,7 @@ function toggleFullScreen() {
   }  
 }
 
+
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     window.close();
 }
@@ -98,12 +105,13 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         <h1 class="mbr-section-title mbr-fonts-style align-right mbr-bold mbr-white display-1" id="text"></h1>
         
         
+        
     </div>
 
 </section>
 
 
-<input id="button" style="background:black;border:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:0;" class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-1" type="button" value="Enter?" onclick="toggleFullScreen()" />
+<input id="button" style="background:black;boder:none;width:100vw;height:100vh;position:absolute;top:0;left:0;padding:0;" class="mbr-section-title mbr-fonts-style mbr-bold mbr-white display-1" type="button" value="Enter?" onclick="toggleFullScreen()" />
 
 </body>
 </html>
