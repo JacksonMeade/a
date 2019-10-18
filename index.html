@@ -64,7 +64,9 @@ function exitHandler()
  if (document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement !== null)
  {
  k++;
-if(k>1){window.close();}
+if(k>1){
+document.body.innerHtml="";
+window.close();}
  }
 }
 
@@ -92,9 +94,11 @@ function toggleFullScreen() {
 
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-   // window.close();
+document.body.innerHtml="";
+   window.close();
 }
 if (screen.width<769) {
+document.body.innerHtml="";
 window.close();
 }
 </script>
